@@ -63,7 +63,7 @@ ThStatsCommit >> commitLog [
 
 { #category : #'as yet unclassified' }
 ThStatsCommit >> commitLogCommand [
-	^ 'git log --pretty=oneline -1 {1}' format: { name }
+	^ 'git --no-pager log --pretty=oneline -1 {1}' format: { name }
 ]
 
 { #category : #accessing }
@@ -89,7 +89,7 @@ ThStatsCommit >> diff [
 
 { #category : #'git commands' }
 ThStatsCommit >> diffCommand [
-	^ 'git diff ' , self name , ' ' , self parentName
+	^ 'git --no-pager diff ' , self name , ' ' , self parentName
 ]
 
 { #category : #modifications }
@@ -152,17 +152,17 @@ ThStatsCommit >> fetch [
 
 { #category : #'git commands' }
 ThStatsCommit >> getHashCommand [
-	^ 'git log --format=%H -n 1 ' , self name
+	^ 'git --no-pager log --format=%H -n 1 ' , self name
 ]
 
 { #category : #'git commands' }
 ThStatsCommit >> getMessageCommand [
-	^ 'git log --format=%B -n 1 ' , self name
+	^ 'git --no-pager log --format=%B -n 1 ' , self name
 ]
 
 { #category : #'git commands' }
 ThStatsCommit >> getParentMessageCommand [
-	^ 'git log --format=%B -n 1 ' , self parentName
+	^ 'git --no-pager log --format=%B -n 1 ' , self parentName
 ]
 
 { #category : #initialization }
@@ -208,7 +208,7 @@ ThStatsCommit >> numStat [
 
 { #category : #'git commands' }
 ThStatsCommit >> numStatCommand [
-	^ 'git diff --numstat ' , name, ' ' , self parentName
+	^ 'git --no-pager diff --numstat ' , name, ' ' , self parentName
 ]
 
 { #category : #accessing }

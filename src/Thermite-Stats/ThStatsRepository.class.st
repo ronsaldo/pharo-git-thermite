@@ -44,8 +44,6 @@ ThStatsRepository >> executeGitCommand: command [
 	OSSUnixSubprocess new
 		workingDirectory: self clonePath;
 		shellCommand: command;
-		redirectStdout;
-		redirectStderr;
 		runAndWaitOnExitDo: [ :process :outString :errString |
 	]
 ]
@@ -57,7 +55,7 @@ ThStatsRepository >> executeGitCommandOutput: command [
 		shellCommand: command;
 		redirectStdout;
 		redirectStderr;
-		runAndWaitOnExitDo: [ :process :outString :errString |
+		runAndWaitPollingEvery: (Delay forMilliseconds: 20) retrievingStreams: true onExitDo: [ :process :outString :errString |
 			^ outString
 	]
 ]

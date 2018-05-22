@@ -32,7 +32,7 @@ ThVisHowToReportABugWorldMenu >> open [
 	labels
 		add:
 			((RTLabel new color: Color veryVeryDarkGray)
-				elementOn: 'https://github.com/ronsaldo/PharoGitHubAPI/issues').
+				elementOn: 'https://github.com/ronsaldo/pharo-git-thermite/issues').
 				
 	v add: labels.
 	RTVerticalLineLayout on: labels.

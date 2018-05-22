@@ -54,7 +54,7 @@ ThGitHubPullRequest >> diff [
 
 { #category : #'git commands' }
 ThGitHubPullRequest >> diffCommand [
-	^ 'git diff ' , self parentSha , ' ' , self localHeadBranchName 
+	^ 'git --no-pager diff ' , self parentSha , ' ' , self localHeadBranchName 
 ]
 
 { #category : #modifications }
@@ -167,7 +167,7 @@ ThGitHubPullRequest >> numStat [
 
 { #category : #'git commands' }
 ThGitHubPullRequest >> numStatCommand [
-	^ 'git diff --numstat ' , self parentSha , ' ' , self localHeadBranchName 
+	^ 'git --no-pager diff --numstat ' , self parentSha , ' ' , self localHeadBranchName 
 ]
 
 { #category : #accessing }

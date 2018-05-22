@@ -42,10 +42,9 @@ ThGitHubRepository >> cloneRepo [
 	self cloneFileReference exists ifTrue: [ ^ true ].
 	OSSUnixSubprocess new
 		shellCommand: self cloneCommand;
-		redirectStdout;
-		redirectStderr;
 		runAndWaitOnExitDo: [ :process :outString :errString |
-	]
+	].
+	FileStream stdout nextPutAll: 'Clone done.'; lf.
 ]
 
 { #category : #accessing }
@@ -68,8 +67,6 @@ ThGitHubRepository >> executeGitCommand: command [
 	OSSUnixSubprocess new
 		workingDirectory: self clonePath;
 		shellCommand: command;
-		redirectStdout;
-		redirectStderr;
 		runAndWaitOnExitDo: [ :process :outString :errString |
 	]
 ]
@@ -81,7 +78,7 @@ ThGitHubRepository >> executeGitCommandOutput: command [
 		shellCommand: command;
 		redirectStdout;
 		redirectStderr;
-		runAndWaitOnExitDo: [ :process :outString :errString |
+		runAndWaitPollingEvery: (Delay forMilliseconds: 20) retrievingStreams: true onExitDo: [ :process :outString :errString |
 			^ outString
 	]
 ]

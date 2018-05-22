@@ -81,7 +81,7 @@ ThGitHubModifiedFileStats >> newContent [
 
 { #category : #accessing }
 ThGitHubModifiedFileStats >> newContentCommand [
-	^ 'git show ' , newVersionBranchName , ':' , filename
+	^ 'git --no-pager show ' , newVersionBranchName , ':' , filename
 ]
 
 { #category : #accessing }
@@ -106,7 +106,7 @@ ThGitHubModifiedFileStats >> oldContent [
 
 { #category : #accessing }
 ThGitHubModifiedFileStats >> oldContentCommand [
-	^ 'git show ' , oldVersionBranchName , ':' , filename
+	^ 'git --no-pager show ' , oldVersionBranchName , ':' , filename
 ]
 
 { #category : #accessing }

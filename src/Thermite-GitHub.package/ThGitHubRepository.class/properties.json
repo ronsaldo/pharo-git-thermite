@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ThGitHubResource",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ProcessWaitDelay"
+	],
+	"instvars" : [ ],
+	"name" : "ThGitHubRepository",
+	"type" : "normal"
+}

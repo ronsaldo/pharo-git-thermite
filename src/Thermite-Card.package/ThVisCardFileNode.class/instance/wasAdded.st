@@ -1,0 +1,3 @@
+testing
+wasAdded
+	^ model wasAdded

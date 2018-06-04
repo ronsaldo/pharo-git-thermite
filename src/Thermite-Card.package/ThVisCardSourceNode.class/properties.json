@@ -1,0 +1,29 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card-CodeAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"parent",
+		"children",
+		"oldModel",
+		"newModel",
+		"wasModified",
+		"diff",
+		"additions",
+		"deletions",
+		"unchangedNumberOfLines",
+		"oldSourceBagOfWords",
+		"newSourceBagOfWords",
+		"sourceBagOfWords",
+		"hasMovementRefactor",
+		"previousMovementRefactorNode",
+		"nextMovementRefactorNode",
+		"palette"
+	],
+	"name" : "ThVisCardSourceNode",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ThGitHubAbstractSession",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"host",
+		"port",
+		"socket",
+		"socketStream"
+	],
+	"name" : "ThGitHubExternalCachedSession",
+	"type" : "normal"
+}

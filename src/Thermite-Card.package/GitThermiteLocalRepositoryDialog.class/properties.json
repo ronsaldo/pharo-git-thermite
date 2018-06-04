@@ -1,0 +1,26 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "Thermite-Card-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"localRepositoryPath",
+		"commitSha",
+		"localRepositoryPathLabel",
+		"commitShaLabel",
+		"localRepositoryPathBrowseButton",
+		"buildVisualizationButton",
+		"languageLabel",
+		"language",
+		"addUnmodifiedClasses",
+		"addUnmodifiedMethods",
+		"addUnchangedLines",
+		"parentCommitShaLabel",
+		"parentCommitSha",
+		"mcDiffButton"
+	],
+	"name" : "GitThermiteLocalRepositoryDialog",
+	"type" : "normal"
+}

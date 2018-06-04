@@ -1,0 +1,18 @@
+{
+	"classtraitcomposition" : "TThGitHubMonticelloLoading classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"modifications",
+		"diff",
+		"numStat",
+		"commits"
+	],
+	"name" : "ThGitHubPullRequest",
+	"commentStamp" : "",
+	"super" : "ThGitHubResource",
+	"traitcomposition" : "TThGitHubMonticelloLoading",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Thermite-GitHub"
+}

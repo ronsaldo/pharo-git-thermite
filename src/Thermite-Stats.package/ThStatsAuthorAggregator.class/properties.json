@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Stats",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"authors"
+	],
+	"name" : "ThStatsAuthorAggregator",
+	"type" : "normal"
+}

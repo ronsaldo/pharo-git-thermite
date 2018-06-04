@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "Thermite-Card-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"projectOwnerLabel",
+		"projectOwner",
+		"projectNameLabel",
+		"projectName",
+		"pullRequestNumberLabel",
+		"pullRequestNumber",
+		"buildVisualizationButton",
+		"languageLabel",
+		"language",
+		"addUnmodifiedClasses",
+		"addUnmodifiedMethods",
+		"addUnchangedLines",
+		"mcDiffButton"
+	],
+	"name" : "GitThermiteGitHubRepositoryDialog",
+	"type" : "normal"
+}

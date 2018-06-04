@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ThVisCardCodeAnalysisBlueprintBuilder",
+	"category" : "Thermite-Card-CodeAnalysis-Pharo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"buildingOldModel"
+	],
+	"name" : "ThVisCardPharoCodeAnalysisBuilder",
+	"type" : "normal"
+}

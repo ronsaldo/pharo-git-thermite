@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Stats-LocalMonticello",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ProcessWaitDelay"
+	],
+	"instvars" : [
+		"title",
+		"oldPackages",
+		"newPackages"
+	],
+	"name" : "ThStatsMonticelloDiff",
+	"type" : "normal"
+}

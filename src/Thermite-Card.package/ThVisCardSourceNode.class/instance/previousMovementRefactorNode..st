@@ -1,0 +1,3 @@
+accessing
+previousMovementRefactorNode: anObject
+	previousMovementRefactorNode := anObject

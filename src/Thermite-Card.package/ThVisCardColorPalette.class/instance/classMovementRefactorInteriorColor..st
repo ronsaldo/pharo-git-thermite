@@ -1,0 +1,3 @@
+accessing
+classMovementRefactorInteriorColor: anObject
+	classMovementRefactorInteriorColor := anObject

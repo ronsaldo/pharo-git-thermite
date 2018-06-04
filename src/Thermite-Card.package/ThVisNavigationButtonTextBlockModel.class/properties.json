@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ThVisNavigationButtonModel",
+	"category" : "Thermite-Card",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text"
+	],
+	"name" : "ThVisNavigationButtonTextBlockModel",
+	"type" : "normal"
+}

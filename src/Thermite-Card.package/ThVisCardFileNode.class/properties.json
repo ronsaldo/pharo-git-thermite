@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"palette",
+		"model"
+	],
+	"name" : "ThVisCardFileNode",
+	"type" : "normal"
+}

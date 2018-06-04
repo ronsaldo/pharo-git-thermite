@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "ThVisCardCodeAnalysisBuilder",
+	"category" : "Thermite-Card-CodeAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"NodeChartHeight",
+		"NodeChartWidth"
+	],
+	"instvars" : [
+		"onlyModifiedContent",
+		"onlyModifiedClasses",
+		"onlyModifiedFunctions",
+		"sourceRootNode",
+		"similarityGroups",
+		"withoutUnchangedLines"
+	],
+	"name" : "ThVisCardCodeAnalysisBlueprintBuilder",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+nodeTypeName
+	self subclassResponsibility

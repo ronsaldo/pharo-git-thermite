@@ -1,0 +1,26 @@
+{
+	"classtraitcomposition" : "TThGitHubMonticelloLoading classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"repository",
+		"title",
+		"numStat",
+		"diff",
+		"modifications",
+		"deletions",
+		"additions",
+		"message",
+		"sha",
+		"parent",
+		"parentMessage"
+	],
+	"name" : "ThStatsCommit",
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TThGitHubMonticelloLoading",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Thermite-Stats-Local"
+}

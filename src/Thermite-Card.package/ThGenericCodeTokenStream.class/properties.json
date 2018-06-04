@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card-CodeAnalysis-Similarity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"in"
+	],
+	"name" : "ThGenericCodeTokenStream",
+	"type" : "normal"
+}

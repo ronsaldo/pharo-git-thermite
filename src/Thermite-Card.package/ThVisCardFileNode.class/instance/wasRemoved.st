@@ -1,0 +1,3 @@
+testing
+wasRemoved
+	^ model wasRemoved

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Stats-Local",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ProcessWaitDelay"
+	],
+	"instvars" : [
+		"path"
+	],
+	"name" : "ThStatsRepository",
+	"type" : "normal"
+}

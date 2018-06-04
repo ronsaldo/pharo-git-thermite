@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PyFile",
+	"category" : "Thermite-Card-CodeAnalysis-Python",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sourceCode"
+	],
+	"name" : "ThVisPyMemoryFile",
+	"type" : "normal"
+}

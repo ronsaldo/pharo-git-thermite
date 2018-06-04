@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card-CodeAnalysis-Similarity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"root",
+		"size"
+	],
+	"name" : "ThAVLDictionary",
+	"type" : "normal"
+}

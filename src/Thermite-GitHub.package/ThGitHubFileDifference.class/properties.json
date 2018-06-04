@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"filename",
+		"oldContent",
+		"newContent"
+	],
+	"name" : "ThGitHubFileDifference",
+	"type" : "normal"
+}

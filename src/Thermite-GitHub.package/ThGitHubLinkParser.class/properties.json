@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"link",
+		"links",
+		"space",
+		"comma",
+		"url",
+		"semicolon",
+		"attribute",
+		"identifier",
+		"equal",
+		"stringLiteral",
+		"identifierStart",
+		"identifierContent"
+	],
+	"name" : "ThGitHubLinkParser",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"code",
+		"message",
+		"content"
+	],
+	"name" : "ThGitHubExternalCacheResponse",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card-CodeAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"palette",
+		"cardBuilder"
+	],
+	"name" : "ThVisCardCodeAnalysisBuilder",
+	"type" : "normal"
+}

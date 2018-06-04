@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"commits",
+		"pullRequest",
+		"treeView",
+		"width"
+	],
+	"name" : "ThVisCard",
+	"type" : "normal"
+}

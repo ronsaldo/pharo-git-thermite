@@ -1,0 +1,3 @@
+accessing
+leafUnchangedColor
+	^ leafUnchangedColor

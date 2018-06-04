@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TThCardPhSourceNode classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ThVisPhCardSourceNodeMethod",
+	"commentStamp" : "",
+	"super" : "ThVisCardSourceNodeMethod",
+	"traitcomposition" : "TThCardPhSourceNode",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Thermite-Card-CodeAnalysis-Pharo"
+}

@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TThCardPySourceNode classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ThVisPyCardSourceNodeFunction",
+	"commentStamp" : "",
+	"super" : "ThVisCardSourceNodeFunction",
+	"traitcomposition" : "TThCardPySourceNode",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Thermite-Card-CodeAnalysis-Python"
+}

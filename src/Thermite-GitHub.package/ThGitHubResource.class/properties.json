@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EmptyLinks"
+	],
+	"instvars" : [
+		"session",
+		"etag",
+		"url",
+		"json",
+		"links",
+		"lastDownloadTime",
+		"parent"
+	],
+	"name" : "ThGitHubResource",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Thermite-Card-CodeAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"blueprintBuilder",
+		"value"
+	],
+	"name" : "ThVisCardCodeAnalysisBlueprintResumeElement",
+	"type" : "normal"
+}

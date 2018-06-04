@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ThVisCardSourceNodeProxy",
+	"category" : "Thermite-Card-CodeAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"action",
+		"title"
+	],
+	"name" : "ThVisCardSourceNodeSubElementBuildProxy",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+accessing
+newSuperName
+	self subclassResponsibility

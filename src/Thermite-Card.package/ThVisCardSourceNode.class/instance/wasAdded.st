@@ -1,0 +1,3 @@
+testing
+wasAdded
+	^ oldModel isNil

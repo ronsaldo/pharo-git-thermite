@@ -1,0 +1,3 @@
+accessing
+allNewSource
+	^ self newSource

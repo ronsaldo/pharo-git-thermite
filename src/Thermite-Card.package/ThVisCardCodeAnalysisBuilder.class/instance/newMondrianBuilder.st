@@ -1,0 +1,3 @@
+instance creation
+newMondrianBuilder
+	^ cardBuilder newMondrianBuilder

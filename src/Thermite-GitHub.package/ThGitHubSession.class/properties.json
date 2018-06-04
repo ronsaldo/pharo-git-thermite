@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "ThGitHubAbstractSession",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"GitHubMimeType",
+		"MainUserAccessToken",
+		"MainUserName",
+		"RedownloadCacheTime"
+	],
+	"instvars" : [
+		"username",
+		"password",
+		"urlCache",
+		"rateLimit",
+		"rateLimitRemaining",
+		"rateLimitReset",
+		"currentClient"
+	],
+	"name" : "ThGitHubSession",
+	"type" : "normal"
+}

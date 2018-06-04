@@ -1,0 +1,3 @@
+accessing
+onlyModifiedContent
+	onlyModifiedContent := true

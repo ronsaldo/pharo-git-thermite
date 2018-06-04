@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ThGitHubResource",
+	"category" : "Thermite-GitHub",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ThGitHubComment",
+	"type" : "normal"
+}

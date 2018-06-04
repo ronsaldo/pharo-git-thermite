@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ThVisAbstractWorldMenu",
+	"category" : "Thermite-Card-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ThVisAboutWorldMenu",
+	"type" : "normal"
+}

@@ -1,7 +1,18 @@
 # Pharo Git Thermite
-#### A visual tool for assessing Git commits and GitHub Pull Requests
 
+Git Thermite is a **visual tool to assess GIT commits, GitHub Pull Requests, and Monticello commits**. Git Thermite provides a visual support to commit, usually presented in a textual fashion.
+
+Here is an example of a large commit:
 ![Git Thermite Visualization](doc/img/thermite-visualization.png?raw=true "Git Thermite Visualization")
+
+The visualization is obtained directly from the *Monticello* window. The left hand side gives a summary of the change:
+- the change has many new lines of code and a few removed lines (top large green bar and a short red bar)
+- many classes have been modified and a few new classes are added (the middle bar has a small green bar and a large yellow bar)
+- many new and modified methods (lower green and yellow bar).
+
+The right hand side gives detail about these changes.
+- each inner box is a class. yellow = modified classes and green = new class
+- each inner-inner box is a method. 
 
 ## Installation
 

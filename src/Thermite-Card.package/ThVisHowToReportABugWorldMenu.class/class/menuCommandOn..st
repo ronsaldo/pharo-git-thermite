@@ -6,4 +6,4 @@ menuCommandOn: aBuilder
 			parent: self projectName asSymbol;
 			label: 'How To report a bug';
 			icon: (Smalltalk ui icons iconNamed: #smallDebug);
-			action: [ self new open.  WebBrowser openOn: 'https://github.com/ronsaldo/PharoGitHubAPI/issues'  ]
+			action: [ WebBrowser openOn: 'https://github.com/ronsaldo/pharo-git-thermite/issues' ]

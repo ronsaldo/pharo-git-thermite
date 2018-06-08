@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ThVisExampleWorldMenu",
+	"name" : "ThVisAboutMenu",
 	"type" : "normal"
 }

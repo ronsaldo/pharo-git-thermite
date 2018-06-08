@@ -1,5 +1,7 @@
 initialization
 initializeWidgets
+	self title: 'Visualize Local Commit'.
+	
 	localRepositoryPathLabel := self newLabel.
 	localRepositoryPath := self newTextInput.
 	localRepositoryPath autoAccept: true.

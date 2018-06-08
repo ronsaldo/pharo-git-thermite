@@ -1,19 +1,23 @@
 initialization
 initializeWidgets
+	self title: 'Visualize GitHub Pull Request'.
+	
 	projectOwnerLabel := self newLabel.
 	projectOwner := self newTextInput.
-	projectOwner autoAccept: true.
-	projectOwnerLabel label: 'Project Owner:'.
+	projectOwner
+		autoAccept: true;
+		aboutText: 'Here goes the GitHub project owner name'.
+	projectOwnerLabel label: 'GitHub Project Owner:'.
 	
 	projectNameLabel := self newLabel.
 	projectName := self newTextInput.
 	projectName autoAccept: true.
-	projectNameLabel label: 'Project Name:'.
+	projectNameLabel label: 'GitHub Project Name:'.
 
 	pullRequestNumberLabel := self newLabel.
 	pullRequestNumber := self newTextInput.
 	pullRequestNumber autoAccept: true.
-	pullRequestNumberLabel label: 'Pull Request Number:'.
+	pullRequestNumberLabel label: 'GitHub Pull Request Number:'.
 
 	languageLabel := self newLabel.
 	language := self newDropList.

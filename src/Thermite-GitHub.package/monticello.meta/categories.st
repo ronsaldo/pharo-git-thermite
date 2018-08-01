@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'Thermite-GitHub'!
-SystemOrganization addCategory: #'Thermite-GitHub-Tests'!
+SystemOrganization addCategory: 'Thermite-GitHub-Tests'!

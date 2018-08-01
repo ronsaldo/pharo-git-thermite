@@ -10,10 +10,10 @@ doFindModifications
 	
 	self fetch; checkout.
 	newContents := filenames collect: [ :filename | repo getFileContent: filename ifAbsent: [nil]].
-	^ (filenames collectWithIndex: [ :filename :index |
+	^ filenames collectWithIndex: [ :filename :index |
 		ThGitHubFileDifference new
 			filename: filename;
 			oldContent: (oldContents at: index);
 			newContent: (newContents at: index);
 			yourself
-	]) select: #isValid
+	]

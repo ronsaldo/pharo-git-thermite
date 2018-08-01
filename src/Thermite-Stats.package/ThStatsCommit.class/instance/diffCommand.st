@@ -1,3 +1,3 @@
 git commands
 diffCommand
-	^ 'git --no-pager diff ' , self name , ' ' , self parentName
+	^ 'git --no-pager diff ' , self parentName , ' ' , self name

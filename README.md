@@ -12,7 +12,7 @@ The visualization is obtained directly from the *Monticello* window. The left ha
 
 The right hand side gives detail about these changes.
 - each inner box is a class. yellow = modified classes and green = new class
-- each inner-inner box is a method. 
+- each inner-inner box is a method.
 
 ## Installation
 
@@ -35,6 +35,8 @@ For visualizing a local Git commit, you can use the dialog in the **World Menu -
 
 ![Visualize local commit dialog](doc/img/visualize-local-commit.png?raw=true "Visualize local commit dialog")
 
+**Thermite Local Commit Video Example:** https://youtu.be/LCHTiJ4nx3g
+
 In this dialog **Local Repository Path** is the path for a locally cloned git repository. **Commit Name** is the name of a git commit (or branch, tag, etc) as accepted by git. **Parent Commit Name** is the name of the commit to use for comparing against. By default this is set to **~1** which is a git notation for
 naming the immediate parent of the commit present in the **Commit Name** text input field.
 
@@ -46,6 +48,8 @@ For visualizing a GitHub pull request, you can use the dialog in the **World Men
 
 ![Visualize Pull Request Dialog](doc/img/visualize-pull-request.png?raw=true "Visualize Pull Request Dialog")
 
+**GithHub Pull Request Thermite Video Example:** https://youtu.be/f196btLfYxM
+
 In this dialog **GitHub Project Owner** is the name of the owner of the GitHub repository to analyze. **GitHub Project Name** is the name of the GitHub project to analyze.
 
 ### Visualizing Monticello commits
@@ -53,6 +57,7 @@ In this dialog **GitHub Project Owner** is the name of the owner of the GitHub r
 Pharo Git Thermite adds some additional buttons into the Monticello Repository Browser. The **Thermite changes** buttons allows you to visualize the changes introduced by a single monticello commit using Pharo Git Thermite. The **Thermite parent changes** button allows you to select a parent commit for comparing using Pharo Git Thermite.
 
 ![Monticello Thermite Buttons](doc/img/thermite-monticello.png?raw=true "Monticello Thermite Buttons")
+**Monticello Thermite Video Example:** https://youtu.be/02CUHBmm-K8
 
 ### Legend
 

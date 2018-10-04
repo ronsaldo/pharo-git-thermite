@@ -1,3 +1,0 @@
-accessing
-newLoc
-	self subclassResponsibility

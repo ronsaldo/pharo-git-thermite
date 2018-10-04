@@ -1,3 +1,0 @@
-testing
-wasModified
-	^ model wasModified

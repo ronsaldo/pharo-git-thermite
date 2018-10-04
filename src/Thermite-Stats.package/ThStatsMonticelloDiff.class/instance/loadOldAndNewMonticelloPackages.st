@@ -1,3 +1,0 @@
-accessing
-loadOldAndNewMonticelloPackages
-	^ { oldPackages . newPackages }

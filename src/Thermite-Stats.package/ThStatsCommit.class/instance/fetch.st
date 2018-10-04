@@ -1,3 +1,0 @@
-actions
-fetch
-	"Do nothing"

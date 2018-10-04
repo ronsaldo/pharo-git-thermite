@@ -1,3 +1,0 @@
-accessing
-oldModel
-	^ oldModel

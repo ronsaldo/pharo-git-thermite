@@ -1,3 +1,0 @@
-accessing
-onlyModifiedClasses
-	onlyModifiedClasses := true

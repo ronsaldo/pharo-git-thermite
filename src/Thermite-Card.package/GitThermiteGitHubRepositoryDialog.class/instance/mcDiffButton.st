@@ -1,3 +1,0 @@
-monticello
-mcDiffButton
-	^ mcDiffButton

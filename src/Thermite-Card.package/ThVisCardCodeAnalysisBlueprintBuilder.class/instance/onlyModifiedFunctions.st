@@ -1,3 +1,0 @@
-accessing
-onlyModifiedFunctions
-	onlyModifiedFunctions := true

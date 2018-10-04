@@ -1,3 +1,0 @@
-accessing
-changeMessage
-	^ self message

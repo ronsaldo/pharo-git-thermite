@@ -1,3 +1,0 @@
-accessing
-localRepositoryPathLabel
-	^ localRepositoryPathLabel

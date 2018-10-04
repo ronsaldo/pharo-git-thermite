@@ -1,3 +1,0 @@
-accessing
-onlyModifiedContent
-	onlyModifiedContent := true

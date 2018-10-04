@@ -1,3 +1,0 @@
-accessing
-nextMovementRefactorNode
-	^ nextMovementRefactorNode

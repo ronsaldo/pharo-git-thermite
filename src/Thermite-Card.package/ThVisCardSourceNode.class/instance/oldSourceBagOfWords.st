@@ -1,3 +1,0 @@
-accessing
-oldSourceBagOfWords
-	^ oldSourceBagOfWords

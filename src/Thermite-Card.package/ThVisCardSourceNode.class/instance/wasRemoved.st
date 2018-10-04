@@ -1,3 +1,0 @@
-testing
-wasRemoved
-	^ newModel isNil

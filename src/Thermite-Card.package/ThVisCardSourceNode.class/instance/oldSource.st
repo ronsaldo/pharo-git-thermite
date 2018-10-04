@@ -1,3 +1,0 @@
-accessing
-oldSource
-	self subclassResponsibility

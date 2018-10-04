@@ -1,3 +1,0 @@
-as yet unclassified
-nullCodeAnalyzer
-	self codeAnalyzer: ThVisCardNullCodeAnalysisBuilder new

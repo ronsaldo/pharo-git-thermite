@@ -1,3 +1,0 @@
-asserting
-shouldBeTestedForCodeSimilarity
-	^ true

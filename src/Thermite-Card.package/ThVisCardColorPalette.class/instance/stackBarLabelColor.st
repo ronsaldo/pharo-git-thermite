@@ -1,3 +1,0 @@
-accessing
-stackBarLabelColor
-	^ stackBarLabelColor

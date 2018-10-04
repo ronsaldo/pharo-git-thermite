@@ -1,3 +1,0 @@
-testing
-isIndirectArrayElement
-	^ false

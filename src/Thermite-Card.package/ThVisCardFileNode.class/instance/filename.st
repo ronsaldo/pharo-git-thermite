@@ -1,3 +1,0 @@
-accessing
-filename
-	^ model filename

@@ -1,3 +1,0 @@
-accessing
-allNewSource
-	^ self newSource

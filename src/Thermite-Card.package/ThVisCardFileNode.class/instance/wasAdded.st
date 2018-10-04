@@ -1,3 +1,0 @@
-testing
-wasAdded
-	^ model wasAdded

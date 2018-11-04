@@ -27,12 +27,11 @@ BaselineOfThermite >> baseline: spec [
 					className: #ConfigurationOfPetitParser;
 					versionString: #'development';
 					loads: #('Core' );
-					repository: 'http://smalltalkhub.com/mc/Moose/PetitParser/main/' ];
-			project: 'Roassal2' with: [
-				spec
-					className: #ConfigurationOfRoassal2;
-					versionString: #'development';
-					repository: 'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main' ].
+					repository: 'http://smalltalkhub.com/mc/Moose/PetitParser/main/' ].
+		spec 
+			baseline: 'Roassal2' with: [
+			spec
+				repository: 'github://ObjectProfile/Roassal2/src' ].
 		spec package: 'DataStudio' with: [
 			spec
 				requires: #('Roassal2');

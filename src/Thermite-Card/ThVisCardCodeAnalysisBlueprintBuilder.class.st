@@ -552,7 +552,6 @@ ThVisCardCodeAnalysisBlueprintBuilder >> methodsMetricsChart [
 	movedMethods := OrderedCollection new.
 	unchangedMethods := OrderedCollection new.
 	allMethods := OrderedCollection new.
-	
 	sourceRootNode allChildrenDo: [ :node |
 		self flag: 'TODO: Check this filtering'.
 		node isFunction ifTrue: [

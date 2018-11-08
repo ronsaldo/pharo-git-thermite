@@ -126,58 +126,14 @@ ThVisCardPharoCodeAnalysisBuilder >> computeCodeChangesFor: pullRequest oldVersi
 
 { #category : #'as yet unclassified' }
 ThVisCardPharoCodeAnalysisBuilder >> filterModifiedFiles: files [
-	^ files reject: [ :file | file filename includesSubstring: '.package' ]
-]
-
-{ #category : #'as yet unclassified' }
-ThVisCardPharoCodeAnalysisBuilder >> findModifiedPackagesIn: pullRequest [
-	| re range filetreeRepository packageName result ranges |
-	re := '[^/\\]+\.package' asRegex.
-	result := Dictionary new.
-	pullRequest modifiedFilenames do: [ :filename |
-		ranges := (re matchingRangesIn: filename).
-		ranges ifNotEmpty: [
-			range := ranges last.
-			filetreeRepository := filename first: range first - 1.
-			packageName := filename copyFrom: range first to: range last.
-			result at: filetreeRepository , packageName put: { packageName . filetreeRepository } 
-		]
-	].
-	^ result
-
+	^ files reject: [ :file | (file filename includesSubstring: '.package') or:
+		[ (file basename endsWith: '.class.st') or:
+		[ (file basename endsWith: '.extension.st') or:
+		[ file basename = 'package.st' ] ]]]
 ]
 
 { #category : #initialization }
 ThVisCardPharoCodeAnalysisBuilder >> initialize [
 	super initialize.
 	self onlyModifiedClasses
-]
-
-{ #category : #'as yet unclassified' }
-ThVisCardPharoCodeAnalysisBuilder >> loadPackages: packages pullRequest: pullRequest [
-	| packageName filetreeRepository filetreeReference repository version package elements methodClass |
-	^ packages values collect: [ :value |
-		packageName := value first.
-		filetreeRepository := value second ifEmpty: ['.'].
-		filetreeReference := pullRequest repository clonePath asFileReference resolve: filetreeRepository.
-		filetreeReference exists ifTrue: [ 
-			repository := MCFileTreeRepository new directory: filetreeReference.
-
-			version := repository versionFrom: (repository versionNameFromFileName: packageName).
-			version ifNotNil: [ 
-				package := RGPackage named: packageName.
-				elements := version snapshot definitions collect: #asRingDefinition.
-				elements reject: #isOrganization thenDo: [ :element |
-					(element isTrait and: [ element isMeta ]) ifFalse: [ 
-						package addElement: element
-					]
-				].
-				package methodsDo: [ :method |
-					methodClass := package lookupClassNamed: method className.
-					methodClass ifNotNil: [ methodClass addMethod: method ]
-				].
-				package
-			]
-		]
-	] thenSelect: #isNotNil
 ]

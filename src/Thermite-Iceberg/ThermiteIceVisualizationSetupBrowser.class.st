@@ -74,8 +74,10 @@ ThermiteIceVisualizationSetupBrowser >> buildVisualization [
 	sourceHistoryPanel commitInfoTabs selectedModel ifNil: [ ^ self ].
 	targetHistoryPanel commitInfoTabs selectedModel ifNil: [ ^ self ].
 	
-	repo := ThStatsRepository path: model entity location fullName.
-	commit := repo commit: targetHistoryPanel commitInfoTabs selectedModel id parent: sourceHistoryPanel commitInfoTabs selectedModel id.
+	"repo := ThStatsRepository path: model entity location fullName.
+	commit := repo commit: targetHistoryPanel commitInfoTabs selectedModel id parent: sourceHistoryPanel commitInfoTabs selectedModel id."
+	repo := ThermiteIceRepository new model: model.
+	commit := repo commit: targetHistoryPanel commitInfoTabs selectedModel parent: sourceHistoryPanel commitInfoTabs selectedModel.
 
 	builder := ThVisCardBuilder new.
 	analyzer := builder codeAnalyzer: language selectedItem new.

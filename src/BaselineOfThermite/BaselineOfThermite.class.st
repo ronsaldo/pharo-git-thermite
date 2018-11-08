@@ -49,7 +49,11 @@ BaselineOfThermite >> baseline: spec [
 			];
 			package: #'Thermite-Card' with: [ 
 				spec requires: #('Thermite-Stats' 'DataStudio-PythonAnalyzer')
+			];
+			package: #'Thermite-Iceberg' with: [ 
+				spec requires: #(#'Thermite-Card')
 			]
+	
 	]
 
 ]

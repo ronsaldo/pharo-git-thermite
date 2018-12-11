@@ -1,5 +1,5 @@
 Class {
 	#name : #ThermiteIceCommand,
 	#superclass : #IceTipCommand,
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Commander'
 }

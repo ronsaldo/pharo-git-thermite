@@ -13,7 +13,7 @@ Class {
 		'additions',
 		'deletions'
 	],
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Mock'
 }
 
 { #category : #accessing }

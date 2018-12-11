@@ -7,7 +7,7 @@ Class {
 		'parentModel',
 		'numStat'
 	],
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Mock'
 }
 
 { #category : #accessing }
@@ -31,14 +31,21 @@ ThermiteIceCommit >> convertIcePackages: packages model: versionModel [
 ]
 
 { #category : #accessing }
+ThermiteIceCommit >> diff [
+	^ 'TODO: Implement this.'
+]
+
+{ #category : #accessing }
 ThermiteIceCommit >> doNumStat [
 	| changes |
 	changes := OrderedCollection new.
 	(parentModel entity changesTo: model entity) do: [ :change |
-		changes add: (ThermiteIceModifiedFileStats new
-			path: change path;
-			sourceCommitModel: parentModel;
-			targetCommitModel: model)
+		change pathForThermite ifNotNil: [ 
+			changes add: (ThermiteIceModifiedFileStats new
+				path: change pathForThermite;
+				sourceCommitModel: parentModel;
+				targetCommitModel: model)
+		]
 	].
 
 	^ changes

@@ -8,3 +8,8 @@ Class {
 ThVisCardSourceNodeMethod >> nodeTypeName [
 	^ 'Method'
 ]
+
+{ #category : #accessing }
+ThVisCardSourceNodeMethod >> unchangedSuperName [
+	^ nil
+]

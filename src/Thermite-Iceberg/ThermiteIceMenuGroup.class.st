@@ -1,7 +1,7 @@
 Class {
 	#name : #ThermiteIceMenuGroup,
 	#superclass : #CmdMenuGroup,
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Commander'
 }
 
 { #category : #accessing }

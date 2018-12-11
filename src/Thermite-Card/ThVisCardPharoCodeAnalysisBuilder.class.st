@@ -53,7 +53,7 @@ ThVisCardPharoCodeAnalysisBuilder >> addPackages: packages to: root [
 
 { #category : #visualization }
 ThVisCardPharoCodeAnalysisBuilder >> build: b changes: changes [
-	| panels |
+	| panels packages |
 	b interaction popupText: #description solidBackgroundColor: self palette popupBackgroundColor.
 	b shape rectangle
 		withTextAbove: #name;
@@ -61,7 +61,12 @@ ThVisCardPharoCodeAnalysisBuilder >> build: b changes: changes [
 		borderWidth: 3;
 		color: self palette packageBackground.
 	b shape shape allShapes first color: self palette textColor.
-	b nodes: changes children forEach: [ :package |
+	packages := changes children.
+	onlyModifiedPackages ifTrue: [ 
+		packages := packages reject: [:child | child wasModified not].
+	].
+
+	b nodes: packages forEach: [ :package |
 		b interaction
 			noInteractions;
 			popupText: [:p | p node description] solidBackgroundColor: self palette popupBackgroundColor.

@@ -371,26 +371,26 @@ ThVisCardBuilder >> buildUpperPanelFor: visitCard [
 	pullRequestType := self guessPullRequestType: pullRequest.
 	
 	kind := (self label: pullRequestType color: self palette importantTextColor) element.
-	pullRequest mergeable ifNil: [
-		difficultyColor := self palette mergeabilityUnknownColor.
-		difficultyTooltip := 'Automatic merge possibility is unknown.'.
-	] ifNotNil: [:mergeable |
+	innerElements := { aName . kind }.
+
+	pullRequest mergeable ifNotNil: [:mergeable |
 		mergeable ifTrue: [
 			difficultyColor := self palette mergeablePullRequestColor.
 			difficultyTooltip := 'Automatic merge is possible.'.
 		] ifFalse: [
 			difficultyColor := self palette unmergablePullRequestColor.
 			difficultyTooltip := 'Automatic merge is not possible.'.
-		]
+		].
+
+		difficultyToIntegrate := RTBox new
+			size: 15;
+			color: difficultyColor;
+			element.
+		difficultyToIntegrate addInteraction: (RTPopup text: difficultyTooltip).
+
+		innerElements := innerElements , { difficultyToIntegrate }.
 	].
 
-	difficultyToIntegrate := RTBox new
-		size: 15;
-		color: difficultyColor;
-		element.
-	difficultyToIntegrate addInteraction: (RTPopup text: difficultyTooltip).
-		
-	innerElements := { aName . kind . difficultyToIntegrate }.
 	view addAll: innerElements.
 	RTHorizontalLineLayout new center; on: innerElements.
 	RTNest new

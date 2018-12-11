@@ -1,6 +1,6 @@
 Class {
 	#name : #GitThermiteLocalRepositoryDialog,
-	#superclass : #ComposableModel,
+	#superclass : #ComposablePresenter,
 	#instVars : [
 		'localRepositoryPath',
 		'commitSha',
@@ -15,9 +15,10 @@ Class {
 		'addUnchangedLines',
 		'parentCommitShaLabel',
 		'parentCommitSha',
-		'mcDiffButton'
+		'mcDiffButton',
+		'addUnmodifiedPackages'
 	],
-	#category : 'Thermite-Card-Menu'
+	#category : #'Thermite-Card-Menu'
 }
 
 { #category : #initialization }
@@ -47,6 +48,7 @@ GitThermiteLocalRepositoryDialog class >> defaultSpec [
 			add: #addUnchangedLines height: self inputTextHeight;
 			add: #addUnmodifiedMethods height: self inputTextHeight;
 			add: #addUnmodifiedClasses height: self inputTextHeight;
+			add: #addUnmodifiedPackages height: self inputTextHeight;
 			
 			add: #buildVisualizationButton height: self inputTextHeight;
 			add: #mcDiffButton height: self inputTextHeight
@@ -69,6 +71,11 @@ GitThermiteLocalRepositoryDialog >> addUnmodifiedMethods [
 	^ addUnmodifiedMethods
 ]
 
+{ #category : #accessing }
+GitThermiteLocalRepositoryDialog >> addUnmodifiedPackages [
+	^ addUnmodifiedPackages
+]
+
 { #category : #initialization }
 GitThermiteLocalRepositoryDialog >> browseLocalRepository [
 	| localRepoPath |
@@ -79,7 +86,7 @@ GitThermiteLocalRepositoryDialog >> browseLocalRepository [
 
 { #category : #initialization }
 GitThermiteLocalRepositoryDialog >> buildVisualization [
-	| repo commit builder analyzer view |
+	| repo commit builder analyzer |
 	repo := ThStatsRepository path: localRepositoryPath text.
 	commit := repo commit: commitSha text parent: parentCommitSha text.
 
@@ -98,6 +105,10 @@ GitThermiteLocalRepositoryDialog >> buildVisualization [
 	
 	addUnmodifiedClasses state ifFalse: [ 
 		analyzer onlyModifiedClasses.
+	].
+
+	addUnmodifiedPackages state ifFalse: [ 
+		analyzer onlyModifiedPackages.
 	].
 
 	builder
@@ -119,6 +130,11 @@ GitThermiteLocalRepositoryDialog >> commitSha [
 { #category : #accessing }
 GitThermiteLocalRepositoryDialog >> commitShaLabel [
 	^ commitShaLabel
+]
+
+{ #category : #accessing }
+GitThermiteLocalRepositoryDialog >> initialExtent [
+	^ 400@330
 ]
 
 { #category : #initialization }
@@ -166,6 +182,9 @@ GitThermiteLocalRepositoryDialog >> initializeWidgets [
 	addUnmodifiedClasses := self newCheckBox.
 	addUnmodifiedClasses label: 'Add unchanged classes'.
 	
+	addUnmodifiedPackages := self newCheckBox.
+	addUnmodifiedPackages label: 'Add unchanged packages'.
+
 	buildVisualizationButton := self newButton.
 	buildVisualizationButton label: 'Build Visualization'.
 	

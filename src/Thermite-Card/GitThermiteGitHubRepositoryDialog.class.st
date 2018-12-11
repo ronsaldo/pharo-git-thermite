@@ -1,6 +1,6 @@
 Class {
 	#name : #GitThermiteGitHubRepositoryDialog,
-	#superclass : #ComposableModel,
+	#superclass : #ComposablePresenter,
 	#instVars : [
 		'projectOwnerLabel',
 		'projectOwner',
@@ -14,9 +14,10 @@ Class {
 		'addUnmodifiedClasses',
 		'addUnmodifiedMethods',
 		'addUnchangedLines',
-		'mcDiffButton'
+		'mcDiffButton',
+		'addUnmodifiedPackages'
 	],
-	#category : 'Thermite-Card-Menu'
+	#category : #'Thermite-Card-Menu'
 }
 
 { #category : #specs }
@@ -46,6 +47,7 @@ GitThermiteGitHubRepositoryDialog class >> defaultSpec [
 			add: #addUnchangedLines height: self inputTextHeight;
 			add: #addUnmodifiedMethods height: self inputTextHeight;
 			add: #addUnmodifiedClasses height: self inputTextHeight;
+			add: #addUnmodifiedPackages height: self inputTextHeight;
 			
 			add: #buildVisualizationButton height: self inputTextHeight;
 			add: #mcDiffButton height: self inputTextHeight
@@ -66,6 +68,11 @@ GitThermiteGitHubRepositoryDialog >> addUnmodifiedClasses [
 { #category : #accessing }
 GitThermiteGitHubRepositoryDialog >> addUnmodifiedMethods [
 	^ addUnmodifiedMethods
+]
+
+{ #category : #accessing }
+GitThermiteGitHubRepositoryDialog >> addUnmodifiedPackages [
+	^ addUnmodifiedPackages
 ]
 
 { #category : #initialization }
@@ -95,6 +102,10 @@ GitThermiteGitHubRepositoryDialog >> buildVisualization [
 		analyzer onlyModifiedClasses.
 	].
 
+	addUnmodifiedPackages state ifFalse: [ 
+		analyzer onlyModifiedPackages.
+	].
+
 	view := builder
     addPullRequest: pullRequest;
     vertical;
@@ -114,6 +125,11 @@ GitThermiteGitHubRepositoryDialog >> filterUnmodifiedClasses [
 { #category : #accessing }
 GitThermiteGitHubRepositoryDialog >> filterUnmodifiedMethods [
 	^ addUnmodifiedMethods
+]
+
+{ #category : #accessing }
+GitThermiteGitHubRepositoryDialog >> initialExtent [
+	^ 400@330
 ]
 
 { #category : #initialization }
@@ -159,6 +175,9 @@ GitThermiteGitHubRepositoryDialog >> initializeWidgets [
 	
 	addUnmodifiedClasses := self newCheckBox.
 	addUnmodifiedClasses label: 'Add unchanged classes'.
+
+	addUnmodifiedPackages := self newCheckBox.
+	addUnmodifiedPackages label: 'Add unchanged packages'.
 	
 	buildVisualizationButton := self newButton.
 	buildVisualizationButton label: 'Build Visualization'.

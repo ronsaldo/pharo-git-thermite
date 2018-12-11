@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Mock'
 }
 
 { #category : #operations }

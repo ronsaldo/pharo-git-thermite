@@ -9,9 +9,10 @@ Class {
 		'addUnchangedLines',
 		'addUnmodifiedMethods',
 		'addUnmodifiedClasses',
-		'buildVisualizationButton'
+		'buildVisualizationButton',
+		'addUnmodifiedPackages'
 	],
-	#category : #'Thermite-Iceberg'
+	#category : #'Thermite-Iceberg-Dialogs'
 }
 
 { #category : #'instance creation' }
@@ -36,6 +37,7 @@ ThermiteIceVisualizationSetupBrowser class >> defaultSpec [
 					add: #addUnchangedLines height: self inputTextHeight;
 					add: #addUnmodifiedMethods height: self inputTextHeight;
 					add: #addUnmodifiedClasses height: self inputTextHeight;
+					add: #addUnmodifiedPackages height: self inputTextHeight;
 			
 					add: #buildVisualizationButton height: self inputTextHeight
 				]
@@ -69,8 +71,13 @@ ThermiteIceVisualizationSetupBrowser >> addUnmodifiedMethods [
 ]
 
 { #category : #initialization }
+ThermiteIceVisualizationSetupBrowser >> addUnmodifiedPackages [
+	^ addUnmodifiedPackages
+]
+
+{ #category : #initialization }
 ThermiteIceVisualizationSetupBrowser >> buildVisualization [
-	| repo commit builder analyzer view |
+	| repo commit builder analyzer |
 	sourceHistoryPanel commitInfoTabs selectedModel ifNil: [ ^ self ].
 	targetHistoryPanel commitInfoTabs selectedModel ifNil: [ ^ self ].
 	
@@ -94,6 +101,10 @@ ThermiteIceVisualizationSetupBrowser >> buildVisualization [
 	
 	addUnmodifiedClasses state ifFalse: [ 
 		analyzer onlyModifiedClasses.
+	].
+
+	addUnmodifiedPackages state ifFalse: [ 
+		analyzer onlyModifiedPackages.
 	].
 
 	builder
@@ -140,6 +151,9 @@ ThermiteIceVisualizationSetupBrowser >> initializeWidgets [
 	
 	addUnmodifiedClasses := self newCheckBox.
 	addUnmodifiedClasses label: 'Add unchanged classes'.
+	
+	addUnmodifiedPackages := self newCheckBox.
+	addUnmodifiedPackages label: 'Add unchanged packages'.
 	
 	buildVisualizationButton := self newButton.
 	buildVisualizationButton label: 'Build Visualization'.

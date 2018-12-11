@@ -7,13 +7,14 @@ Class {
 		'onlyModifiedFunctions',
 		'sourceRootNode',
 		'similarityGroups',
-		'withoutUnchangedLines'
+		'withoutUnchangedLines',
+		'onlyModifiedPackages'
 	],
 	#classVars : [
 		'NodeChartHeight',
 		'NodeChartWidth'
 	],
-	#category : 'Thermite-Card-CodeAnalysis'
+	#category : #'Thermite-Card-CodeAnalysis'
 }
 
 { #category : #initialization }
@@ -74,6 +75,8 @@ ThVisCardCodeAnalysisBlueprintBuilder >> allContent [
 	withoutUnchangedLines := false.
 	onlyModifiedClasses := false.
 	onlyModifiedFunctions := false.
+	onlyModifiedPackages := false.
+	
 ]
 
 { #category : #visualization }
@@ -244,7 +247,7 @@ ThVisCardCodeAnalysisBlueprintBuilder >> buildLeafTextNodes: leafNodes visualiza
 		].
 	
 		nodeSize := displayedLinesSum sqrt * 0.25.
-		normalizationFactor := nodeSize * NodeChartHeight / displayedLinesSum.
+		normalizationFactor := nodeSize * NodeChartHeight / (displayedLinesSum max: 1).
 		b shape box
 			color: [:proxy | proxy metric second];
 			width: NodeChartWidth;
@@ -603,6 +606,11 @@ ThVisCardCodeAnalysisBlueprintBuilder >> onlyModifiedContent [
 { #category : #accessing }
 ThVisCardCodeAnalysisBlueprintBuilder >> onlyModifiedFunctions [
 	onlyModifiedFunctions := true
+]
+
+{ #category : #accessing }
+ThVisCardCodeAnalysisBlueprintBuilder >> onlyModifiedPackages [
+	onlyModifiedPackages := true
 ]
 
 { #category : #visualization }

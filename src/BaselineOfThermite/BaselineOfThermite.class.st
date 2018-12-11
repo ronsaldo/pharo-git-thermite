@@ -16,12 +16,12 @@ BaselineOfThermite >> baseline: spec [
 				repository: 'github://marianopeck/OSSubprocess/repository' ];
 			yourself.
 
+		spec 
+			baseline: 'NeoJSON' with: [
+			spec
+				repository: 'github://svenvc/NeoJSON/repository' ].
+
 		spec
-			project: 'NeoJSON' with: [
-				spec
-					className: #ConfigurationOfNeoJSON;
-					versionString: #'stable';
-					repository: 'http://mc.stfx.eu/Neo' ];
 			project: 'PetitParser' with: [
 				spec
 					className: #ConfigurationOfPetitParser;

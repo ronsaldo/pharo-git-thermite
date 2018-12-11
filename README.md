@@ -27,6 +27,26 @@ Metacello new
 
 ## Usage
 
+### Iceberg integration
+For visualizing the local image changes to commit with Iceberg, there is a
+*Thermite* button in the dialog for reviewing the changes to commit.
+
+![Iceberg commit integration](doc/img/iceberg-commit-thermite.png?raw=true "Visualize changes to commit")
+
+### Iceberg arbitrary commit comparison
+
+For visualizing arbitrary iceberg git commits with Git Thermite, there is the
+*Thermite -> Create Thermite visualization...* context menu in the repositories
+browser.
+
+![Iceberg integration](doc/img/iceberg-build-thermite-visualization.png?raw=true "Create Thermite visualization with iceberg")
+
+This menu entries opens a dialog for selecting the two git commits to visualize
+with Thermite, along with some options to customize the visualization.
+
+![Iceberg thermite commit selection](doc/img/iceberg-thermite-commit-selection.png?raw=true "Iceberg commit selection to crete Thermite visualization")
+
+
 ### Visualizing a local git commit
 
 For visualizing a local Git commit, you can use the dialog in the **World Menu -> Git Thermite -> Visualize local commit**.

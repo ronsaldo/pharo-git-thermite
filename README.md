@@ -16,7 +16,7 @@ The right hand side gives detail about these changes.
 
 ## Installation
 
-The following script installs Git Thermite in a Pharo 6.1 image:
+The following script installs Git Thermite in a Pharo 7 image:
 
 ```smalltalk
 Metacello new

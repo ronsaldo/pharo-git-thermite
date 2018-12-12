@@ -46,6 +46,11 @@ with Thermite, along with some options to customize the visualization.
 
 ![Iceberg thermite commit selection](doc/img/iceberg-thermite-commit-selection.png?raw=true "Iceberg commit selection to crete Thermite visualization")
 
+### Iceberg integration demo video
+
+A short demo video on how to use the Iceberg integration is available at:
+
+[![Git Thermite Iceberg integration demo](http://img.youtube.com/vi/TdBHpdyFgZE/0.jpg)](http://www.youtube.com/watch?v=TdBHpdyFgZE "Git Thermite Iceberg integration demo")
 
 ### Visualizing a local git commit
 

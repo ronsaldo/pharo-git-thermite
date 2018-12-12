@@ -11,7 +11,8 @@ Class {
 		'newVersionLineCount',
 		'oldVersionLineCount',
 		'additions',
-		'deletions'
+		'deletions',
+		'wasModified'
 	],
 	#category : #'Thermite-Iceberg-Mock'
 }
@@ -31,7 +32,6 @@ ThermiteIceModifiedFileStats >> computeDiffStats [
 	diffBuilder patchSequenceDoIfMatch: [ :string | ]
 		ifInsert: [ :string | additions := additions + 1]
 		ifRemove: [ :string | deletions := deletions + 1]
-
 ]
 
 { #category : #accessing }
@@ -75,7 +75,7 @@ ThermiteIceModifiedFileStats >> gtInspectorDiffIn: composite [
 { #category : #accessing }
 ThermiteIceModifiedFileStats >> newContent [
 	^ newContent ifNil: [ newContent := self newContentFileReference exists
-			ifTrue: [self newContentFileReference contents ]
+			ifTrue: [ self readContentFrom: self newContentFileReference ]
 			ifFalse: [ '' ]]
 ]
 
@@ -92,7 +92,7 @@ ThermiteIceModifiedFileStats >> newVersionLineCount [
 { #category : #accessing }
 ThermiteIceModifiedFileStats >> oldContent [
 	^ oldContent ifNil: [ oldContent := self oldContentFileReference exists
-			ifTrue: [self oldContentFileReference contents]
+			ifTrue: [ self readContentFrom: self oldContentFileReference]
 			ifFalse: [ '' ] ]
 ]
 
@@ -122,6 +122,13 @@ ThermiteIceModifiedFileStats >> printOn: aStream [
 ]
 
 { #category : #accessing }
+ThermiteIceModifiedFileStats >> readContentFrom: aFileReference [
+	^ [
+		aFileReference contents
+	] on: ZnInvalidUTF8 do: [ '<<binary-file>>' ]
+]
+
+{ #category : #accessing }
 ThermiteIceModifiedFileStats >> sourceCommitModel [
 	^ sourceCommitModel
 ]
@@ -148,7 +155,7 @@ ThermiteIceModifiedFileStats >> wasAdded [
 
 { #category : #accessing }
 ThermiteIceModifiedFileStats >> wasModified [
-	^ self additions ~= 0 or: [ self deletions ~= 0 ]
+	^ wasModified ifNil: [wasModified := self wasAdded not and: [self wasRemoved not and: [self oldContent ~= self newContent ]]]
 ]
 
 { #category : #accessing }

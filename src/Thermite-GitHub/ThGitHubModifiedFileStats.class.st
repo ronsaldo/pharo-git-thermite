@@ -12,9 +12,10 @@ Class {
 		'newContent',
 		'diff',
 		'oldVersionLineCount',
-		'newVersionLineCount'
+		'newVersionLineCount',
+		'wasModified'
 	],
-	#category : 'Thermite-GitHub'
+	#category : #'Thermite-GitHub'
 }
 
 { #category : #accessing }
@@ -146,7 +147,7 @@ ThGitHubModifiedFileStats >> wasAdded [
 
 { #category : #testing }
 ThGitHubModifiedFileStats >> wasModified [
-	^ self additions ~= 0 or: [ self deletions ~= 0 ]
+	^ wasModified ifNil: [wasModified := self wasAdded not and: [self wasRemoved not and: [self oldContent ~= self newContent ]]]
 ]
 
 { #category : #testing }
